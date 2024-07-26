@@ -17,7 +17,7 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 # Setting the OpenAI API key 
 
 load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 
 
 llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, openai_api_key=OPENAI_API_KEY)
@@ -36,7 +36,7 @@ text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=20
 splits = text_splitter.split_documents(all_documents)
 
 # Initialize embeddings and vector store
-vectorstore = FAISS.from_documents(documents=splits, embedding=OpenAIEmbeddings())
+vectorstore = FAISS.from_documents(documents=splits, embedding=OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY))
 retriever = vectorstore.as_retriever()
 
 # Contextualize question prompt

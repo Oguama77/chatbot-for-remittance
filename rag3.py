@@ -18,7 +18,6 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 #load_dotenv()
 #OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
-os.environ["OPENAI_API_KEY"] == st.secrets["OPENAI_API_KEY"]
 
 llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0, openai_api_key=st.secrets.OPENAI_API_KEY)
 

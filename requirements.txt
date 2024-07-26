@@ -10,4 +10,5 @@ openai==1.37.1
 pypdf==4.3.0
 sentence-transformers==3.0.1
 pysqlite3-binary
+FAISS-cpu
 protobuf==3.20.0

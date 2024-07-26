@@ -1,0 +1,13 @@
+langchain==0.2.11
+langchain_chroma==0.1.2
+langchain_community==0.2.10
+langchain_core==0.2.23
+langchain_openai==0.1.17
+langchain_text_splitters==0.2.2
+langchain-experimental==0.0.62
+langchain-huggingface==0.0.3
+openai==1.37.1
+pypdf==4.3.0
+sentence-transformers==3.0.1
+pysqlite3-binary
+protobuf==3.20.0

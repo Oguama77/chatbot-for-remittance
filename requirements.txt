@@ -12,3 +12,4 @@ sentence-transformers==3.0.1
 pysqlite3-binary
 FAISS-cpu
 protobuf==3.20.0
+streamlit-chat==0.1.1

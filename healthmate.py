@@ -93,17 +93,11 @@ if 'chat_history' not in st.session_state:
 
 # Display chat history
 def display_chat_history():
-    for i, (user_message, bot_response) in enumerate(st.session_state['chat_history']):
-        with st.expander(f"Question {i+1}", expanded=True):
-            st.markdown(
-                f"""
-                <div style="background-color:#f0f0f5;padding:10px;border-radius:5px;color:#000000;">
-                    <strong>User:</strong> {user_message}
-                </div>
-                """,
-                unsafe_allow_html=True
-            )
-            st.write(f"**Bot:** {bot_response}")
+    for user_message, bot_response in st.session_state['chat_history']:
+        with st.chat_message("user", avatar="🧑"):
+            st.write(user_message)
+        with st.chat_message("assistant", avatar="🧑‍⚕️"):
+            st.write(bot_response)
 
 # Function to clear chat history
 def clear_chat_history():
@@ -130,9 +124,11 @@ display_chat_history()
 st.write("---")  # Divider lin
 
 if st_prompt:
-    message(st_prompt, is_user=True)
     answer = answer_question(st_prompt, st.session_state['session_id'])
-    message(answer, is_user=False)
+    with st.chat_message("user", avatar="🧑"):
+            st.write(st_prompt)
+    with st.chat_message("assistant", avatar="🧑‍⚕️"):
+        st.write(answer)
     st.session_state['chat_history'].append((st_prompt, answer))  # Save Q&A in chat history
     
     

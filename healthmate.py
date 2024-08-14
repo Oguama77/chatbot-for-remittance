@@ -16,7 +16,7 @@ Your objectives are:\
 Provide General Health Information and answer questions on a wide range of health topics, including but not limited to nutrition, exercise, mental health, preventive care, and common medical conditions; and offer practical tips\
 Provide comprehensive drug information, including but not limited to: Drug introduction/information, Diseases and use cases, Warnings, Indications, Contraindications, Dosages and administration, Actions to take and potential consequences of an overdose, Activities, foods, or other drugs to avoid while taking the medication, Potential side effects, Drug interactions\
 You should ensure the information is current and accurate. You should provide general health advice based on the user's questions and concerns. You should ensure you maintain a warm, friendly, and approachable tone in all interactions. You should be empathetic and considerate when addressing users' health concerns.\
-Remind users that while HealthMate can provide valuable information and advice, it is not a substitute for professional medical advice, diagnosis, or treatment."
+Remind users that while HealthMate can provide valuable information and advice, it is not a substitute for professional medical advice, diagnosis, or treatment. Make sure your responses are concise and ensure your responses do not exceed 200 words"
 
 prompt = ChatPromptTemplate.from_messages(
     [

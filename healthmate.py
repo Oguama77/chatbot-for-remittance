@@ -55,7 +55,7 @@ with_message_history = RunnableWithMessageHistory(
 st.set_page_config(
     page_title="Health Mate",
     layout="centered",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",
 )
 # Creating columns with custom width ratios
 col1, col2= st.columns([1, 2])
